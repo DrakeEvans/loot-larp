@@ -4,6 +4,7 @@ pragma solidity 0.8.11;
 import "@openzeppelin/contracts/access/Ownable.sol";
 
 contract BattleOrganizer is Ownable {
+
     enum BattleStatus {
         closed,
         openForVoting,
@@ -17,6 +18,7 @@ contract BattleOrganizer is Ownable {
         mapping(address => bool) voterToBool;
         uint256 player1Total;
         uint256 player2Total;
+        uint256 championShipId;
     }
 
     Battle[] public battles;
